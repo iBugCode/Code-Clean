@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>代码清洗</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css?v=1.0.0">
 </head>
 <body>
     <div class="container">
@@ -21,6 +21,11 @@
 
     <div class="modal-overlay" id="modal-overlay">
         <div class="modal">
+            <button class="btn-close" id="btn-close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 5L5 15M5 5l10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
             <h3 id="modal-title">添加清洗方案</h3>
             <div class="form-group">
                 <label>方案名称</label>
@@ -39,6 +44,6 @@
     <div class="toast" id="toast"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-    <script src="index.js"></script>
+    <script src="index.js?v=1.0.0"></script>
 </body>
 </html>

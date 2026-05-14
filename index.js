@@ -336,16 +336,7 @@ addSchemeBtn.addEventListener('click', openAddModal);
 addRuleBtn.addEventListener('click', () => addRuleItem());
 btnCancel.addEventListener('click', () => modalOverlay.classList.remove('show'));
 btnSave.addEventListener('click', saveScheme);
-
-modalOverlay.addEventListener('click', e => {
-    if (e.target === modalOverlay) modalOverlay.classList.remove('show');
-});
-
-document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && modalOverlay.classList.contains('show')) {
-        modalOverlay.classList.remove('show');
-    }
-});
+$('btn-close').addEventListener('click', () => modalOverlay.classList.remove('show'));
 
 // --- 初始化 ---
 

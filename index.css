@@ -202,6 +202,7 @@ body {
 }
 
 .modal {
+    position: relative;
     background: #1e1e30;
     border: 1px solid #2a2a3e;
     border-radius: 14px;
@@ -217,6 +218,28 @@ body {
     font-size: 17px;
     font-weight: 600;
     color: #eee;
+}
+
+.btn-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #999;
+    transition: all 0.15s;
+}
+
+.btn-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
 }
 
 .form-group {
