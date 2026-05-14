@@ -114,7 +114,6 @@ function selectScheme(id) {
     updateActiveTag();
     if (originalCode) {
         cleanCode();
-        codeInput.select();
     }
 }
 
@@ -314,8 +313,16 @@ codeInput.addEventListener('paste', () => {
         } else {
             updateHighlight(originalCode);
         }
-        codeInput.select();
     }, 0);
+});
+
+codeInput.addEventListener('input', () => {
+    originalCode = codeInput.value;
+    if (originalCode && currentSchemeId) {
+        cleanCode();
+    } else {
+        updateHighlight(originalCode);
+    }
 });
 
 codeInput.addEventListener('dblclick', copyCleanedCode);
